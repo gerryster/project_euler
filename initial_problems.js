@@ -1,4 +1,5 @@
 
+// Problem 1:
 var three_and_five = function(n) {
   var sum = 0;
   for(var i = 0; i < n; i++) {
@@ -13,6 +14,7 @@ var three_and_five = function(n) {
 
 console.log("sum of three and five below 1000: " + three_and_five(1000));
 
+// Problem 2:
 var fib = function(nth) {
   var nextFib = function(previous, nth) {
     if(nth <= 1) return 1;
@@ -43,8 +45,6 @@ var sum_even_fib = function(n){
       sum+=f;
     }
 
-    console.log("f=" + f + "i=" + i)
-
     i=i+1;
   }
 
@@ -54,3 +54,24 @@ var sum_even_fib = function(n){
 console.log("the sum of fib under is " + sum_even_fib(20));
 console.log("the sum of fib under is " + sum_even_fib(1000));
 console.log("the sum of fib under is " + sum_even_fib(4000000));
+
+// Problem 3:
+var nPrimes = function(nth) {
+  var initial = 3
+  var result = [2];
+
+
+  return result;
+}
+
+var largestFactor = function(n) {
+  var factor = Math.round(n / 2);
+  while((n % factor !== 0) && factor !== largestFactor(factor)) {
+    factor--;
+  }
+  return factor;
+}
+
+console.log("largestFactor(3): " + largestFactor(3));
+console.log("largestFactor(10): " + largestFactor(10));
+console.log("largestFactor(13195): " + largestFactor(13195));
